@@ -1,0 +1,161 @@
+/*****
+
+Colors
+Primary
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+Neutral
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+Typography
+Body Copy
+- Font size (paragraph): 18px
+Font
+- Family: Outfit
+- Weights: 300, 400, 600
+
+*****/
+
+:root {
+  /* COLORS */
+  /* primary */
+  --primary-softblue: hsl(215, 51%, 70%);
+  --primary-cyan: hsl(178, 100%, 50%);
+
+  /* neutral */
+  --neutral-mainbg: hsl(217, 54%, 11%);
+  --neutral-cardbg: hsl(216, 50%, 16%);
+  --neutral-line: hsl(215, 32%, 27%);
+  --neutral-white: hsl(0, 0%, 100%);
+
+  /* TYPOGRAPHY */
+  --bodyFont: 18px;
+
+  /* FONTS */
+  --fontFamily: "Outfit", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img {
+  display: block;
+}
+
+body {
+  font-size: var(--bodyFont);
+  font-family: var(--fontFamily);
+  background-color: var(--neutral-mainbg);
+}
+
+.container {
+  border-radius: 10px;
+  margin: 3rem 2rem;
+  padding: 2rem;
+  background-color: var(--neutral-cardbg);
+  max-width: 35rem;
+}
+
+.hero-img img {
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-img img:hover {
+  cursor: pointer;
+}
+
+.hero-text h2 {
+  color: var(--neutral-white);
+  padding: 1.5rem 0;
+}
+
+.hero-text h2 a {
+  color: var(--neutral-white);
+  text-decoration: none;
+}
+.hero-text p {
+  color: var(--primary-softblue);
+  font-weight: 300;
+  line-height: 1.5;
+  padding-bottom: 1rem;
+}
+
+.balance-time-container {
+  display: flex;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.balance-container {
+  display: flex;
+  margin-right: auto;
+}
+
+.balance-container img {
+  padding-right: 0.5rem;
+}
+
+.balance-container p {
+  color: var(--primary-cyan);
+}
+
+.time-container {
+  display: flex;
+}
+
+.time-container img {
+  padding-right: 0.5rem;
+}
+
+.time-container p {
+  color: var(--primary-cyan);
+}
+
+.divider {
+  width: 100%;
+  border: 0.5px solid var(--neutral-line);
+  margin: 1rem 0 2rem 0;
+}
+
+.creator-container {
+  display: flex;
+  align-items: center;
+}
+
+.creator-container img {
+  border: 1px solid var(--neutral-white);
+  border-radius: 50%;
+  max-width: 15%;
+  margin-right: 1rem;
+}
+
+.creator-container p {
+  color: var(--primary-softblue);
+}
+
+.creator-container p a {
+  color: var(--neutral-white);
+  text-decoration: none;
+}
+
+/* big layout */
+@media screen and (min-width: 576px) {
+  .container {
+    margin: 2rem auto;
+  }
+}
